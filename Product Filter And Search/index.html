@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../image/images/Pharmacy-logo-on-transparent-PNG.png">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+         <div class="nav__data">
+            <a href="#" class="nav__logo">
+               <img src="../image/images/Pharmacy-logo-on-transparent-PNG.png" alt="">lorem
+            </a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+             <li><a href="../index.html" class="nav__link">Home</a></li>
+
+             <li><a href="../index.html" class="nav__link">Company</a></li>
+
+             <!--=============== DROPDOWN 1 ===============-->
+             <li class="dropdown__item">
+                <div class="nav__link">
+                   Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-pie-chart-line"></i> Overview
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-arrow-up-down-line"></i> Transactions
+                      </a>
+                   </li>
+
+                   <!--=============== DROPDOWN SUBMENU ===============-->
+                   <li class="dropdown__subitem">
+                      <div class="dropdown__link">
+                         <i class="ri-bar-chart-line"></i> Reports <i class="ri-add-line dropdown__add"></i>
+                      </div>
+
+                      <ul class="dropdown__submenu">
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-file-list-line"></i> Documents
+                            </a>
+                         </li>
+ 
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-cash-line"></i> Payments
+                            </a>
+                         </li>
+ 
+                         <li>
+                            <a href="#" class="dropdown__sublink">
+                               <i class="ri-refund-2-line"></i> Refunds
+                            </a>
+                         </li>
+                      </ul>
+                   </li>
+                </ul>
+             </li>
+             
+             <li><a href="../Shopping-Cart-master/index.html" class="nav__link">Products</a></li>
+
+             <!--=============== DROPDOWN 2 ===============-->
+             <li class="dropdown__item">
+                <div class="nav__link">
+                   <a href="../Sliding-Sign-In-Sign-Up-Form-master/index.html" style="color: black;">sign in <i class="ri-arrow-down-s-line dropdown__arrow"></i></a>
+                </div>
+
+                <ul class="dropdown__menu">
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-user-line"></i> Profiles
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-lock-line"></i> Accounts
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="#" class="dropdown__link">
+                         <i class="ri-message-3-line"></i> Messages
+                      </a>
+                   </li>
+                </ul>
+             </li>
+
+             <li><a href="../Contact-Us-Page-Design-master/index.html" class="nav__link">Contact</a></li>
+          </ul>
+       
+            
+         </div>
+      </nav>
+   </header> 
+
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search product name here.."
+        />
+        <button id="search">Search</button>
+      </div>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('1')">
+          1
+        </button>
+        <button class="button-value" onclick="filterProduct('2')">
+          2
+        </button>
+        <button class="button-value" onclick="filterProduct('3')">
+          3
+        </button>
+        <button class="button-value" onclick="filterProduct('4')">
+          4
+        </button>
+        
+      </div>
+      <div id="products"></div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
